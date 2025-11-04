@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey Details - Learning Journey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/cute-style.css">
+    <style>
+        .journey-details-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background-color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .journey-header {
+            margin-bottom: 2rem;
+        }
+        
+        .journey-category {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .journey-category.programming {
+            background-color: #e3f2fd;
+            color: #1976d2;
+        }
+        
+        .journey-category.language {
+            background-color: #f3e5f5;
+            color: #7b1fa2;
+        }
+        
+        .journey-category.music {
+            background-color: #fff3e0;
+            color: #f57c00;
+        }
+        
+        .journey-title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .journey-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+        
+        .journey-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .journey-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #444;
+        }
+        
+        .advice-section {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .advice-title {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .advice-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .advice-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .advice-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .advice-list li i {
+            color: #ff6b6b;
+            margin-right: 1rem;
+            margin-top: 0.2rem;
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 1.5rem;
+            background-color: #f0f0f0;
+            color: #333;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #e0e0e0;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar container">
+            <div class="logo">
+                <h1>Learning Journey</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="start-journey.html">Start My Journey</a></li>
+                <li><a href="explore-journeys.html">Explore Journeys</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn" onclick="window.location.href='auth.html'">Login / Register</button>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Journey Details Section -->
+    <div class="container">
+        <div class="journey-details-container">
+            <!-- Journey Header -->
+            <div class="journey-header">
+                <div id="journeyCategory" class="journey-category programming">Programming</div>
+                <h2 id="journeyTitle" class="journey-title">My JavaScript Mastery Journey</h2>
+                <div class="journey-meta">
+                    <span><i class="fas fa-user"></i> <span id="journeyAuthor">Alex Johnson</span></span>
+                    <span><i class="fas fa-calendar"></i> <span id="journeyDuration">4 months</span></span>
+                </div>
+                <p id="journeyDescription" class="journey-description">From zero to building interactive web applications. Follow my progress as I learn JavaScript, React, and more!</p>
+            </div>
+
+            <!-- Learning Advice Section -->
+            <div class="advice-section">
+                <h3 id="adviceTitle" class="advice-title">JavaScript Learning Advice</h3>
+                <ul id="adviceList" class="advice-list">
+                    <li><i class="fas fa-check-circle"></i> <span>Start with basics: variables, data types, functions, and control flow</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Practice DOM manipulation to create interactive pages</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Learn ES6+ features like arrow functions, Promise, and async/await</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Try using front-end frameworks like React or Vue for project development</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span>Practice coding daily and participate in small projects or challenges</span></li>
+                </ul>
+            </div>
+
+            <!-- Back Button -->
+            <a href="explore-journeys.html" class="back-button"><i class="fas fa-arrow-left"></i> Back to Explore</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Learning Journey</h3>
+                    <p>Document growth, inspire others</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="start-journey.html">Start Journey</a></li>
+                        <li><a href="explore-journeys.html">Explore</a></li>
+                        <li><a href="auth.html">Login / Register</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Learning Journey. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const navActions = document.querySelector('.nav-actions');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navLinks.style.display === 'flex';
+            navLinks.style.display = isOpen ? 'none' : 'flex';
+            navActions.style.display = isOpen ? 'none' : 'flex';
+        });
+
+        // Get journey type from URL parameters
+        function getJourneyType() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('type') || 'programming';
+        }
+
+        // Journey data
+        const journeyData = {
+            programming: {
+                category: 'programming',
+                categoryText: 'Programming',
+                title: 'My JavaScript Mastery Journey',
+                author: 'Alex Johnson',
+                duration: '4 months',
+                description: 'From zero to building interactive web applications. Follow my progress as I learn JavaScript, React, and more!',
+                adviceTitle: 'JavaScript Learning Advice',
+                tips: [
+                    'Start with basics: variables, data types, functions, and control flow',
+                    'Practice DOM manipulation to create interactive pages',
+                    'Learn ES6+ features like arrow functions, Promise, and async/await',
+                    'Try using front-end frameworks like React or Vue for project development',
+                    'Practice coding daily and participate in small projects or challenges'
+                ]
+            },
+            language: {
+                category: 'language',
+                categoryText: 'Language',
+                title: '30 Days of Spanish Challenge',
+                author: 'Maria Rodriguez',
+                duration: '30 days',
+                description: 'My daily journey to learn Spanish basics in just 30 days. Join me as I practice vocabulary, grammar, and pronunciation.',
+                adviceTitle: 'Spanish Learning Advice',
+                tips: [
+                    'Learn 10-15 new words every day and use them in daily conversations',
+                    'Watch Spanish movies or TV shows with subtitles to aid understanding',
+                    'Use flashcard apps like Anki or Quizlet to review vocabulary',
+                    'Try to find a language exchange partner for speaking practice',
+                    'Learn basic grammar structures but don\'t get too caught up in perfection'
+                ]
+            },
+            music: {
+                category: 'music',
+                categoryText: 'Music',
+                title: 'Learning Guitar from Scratch',
+                author: 'David Kim',
+                duration: '6 months',
+                description: 'Documenting my progress as I learn to play the guitar. Includes weekly practice sessions, song covers, and technique improvements.',
+                adviceTitle: 'Guitar Learning Advice',
+                tips: [
+                    'Practice consistently for at least 15-30 minutes every day',
+                    'Start with basic chords and simple songs',
+                    'Learn proper posture and hand positions to avoid injuries',
+                    'Use a metronome to practice rhythm and speed control',
+                    'Record yourself playing to track progress and identify areas for improvement'
+                ]
+            }
+        };
+
+        // Populate page with journey data
+        function populateJourneyData() {
+            const journeyType = getJourneyType();
+            const journey = journeyData[journeyType] || journeyData.programming;
+
+            // Update journey details
+            document.getElementById('journeyCategory').textContent = journey.categoryText;
+            document.getElementById('journeyCategory').className = `journey-category ${journey.category}`;
+            document.getElementById('journeyTitle').textContent = journey.title;
+            document.getElementById('journeyAuthor').textContent = journey.author;
+            document.getElementById('journeyDuration').textContent = journey.duration;
+            document.getElementById('journeyDescription').textContent = journey.description;
+            document.getElementById('adviceTitle').textContent = journey.adviceTitle;
+
+            // Update advice list
+            const adviceList = document.getElementById('adviceList');
+            adviceList.innerHTML = '';
+            journey.tips.forEach(tip => {
+                const li = document.createElement('li');
+                li.innerHTML = `<i class="fas fa-check-circle"></i> <span>${tip}</span>`;
+                adviceList.appendChild(li);
+            });
+        }
+
+        // Load journey data when page loads
+        window.addEventListener('DOMContentLoaded', populateJourneyData);
+    </script>
+</body>
+</html>
